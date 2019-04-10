@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <style>
     * {
-        outline: red 1px solid;
+        /*outline: red 1px solid;*/
         margin: 0;
         box-sizing: border-box;
     }
@@ -29,7 +29,6 @@
         font-size: 2.5rem;
         padding-top: 5px;
         color: gray;
-    /*  transition: all ease 1s;*/
     }
     #Left {
         float: left;
@@ -54,9 +53,13 @@
     .bell {
         margin-left: 42%;
         margin-bottom: 8px;
+        margin-top: 10px;
         
         font-size: 5rem;
         color: rgba(30, 30, 30, 0.5);
+
+        cursor: pointer;
+        transition: all ease 130ms;
     }
     h3 {
         font-size: 1.7rem;
@@ -82,7 +85,7 @@
 <body>
     <header>
         <i id="Left" class="fa arrow"></i>
-        <p>SCROLL DOWN</p>
+        <p>MOVE DOWN</p>
         <i id="right" class="fa arrow"></i>
     </header>
     <div class="clickMe"></div>

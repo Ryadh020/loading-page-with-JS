@@ -1,3 +1,6 @@
+// VARs
+const bell = document.querySelector('#bell');
+
 // CONSTRUCTOR FUNCTION :
 
 function Icons() {
@@ -14,15 +17,35 @@ function Icons() {
             }, 500)
         }, 1000)  
      }
+     this.ringBell = function(id) {
+        
+           let arr = document.querySelector(`${id}`);
+           arr.style.transform = "rotate(18deg)";
+
+           setTimeout(function() {
+            arr.style.transform = "rotate(-18deg)";
+           },300)
+
+           setTimeout(function() {
+            arr.style.transform = "rotate(0deg)";
+           },500)
+
+           
+     }
 } 
 
+      // move the arrow up/down
 const arrowR =  new Icons();
 arrowR.fillArrow("#right");
-
-
+      // move the arrow up/down
 const arrowL = new Icons();
 arrowL.fillArrow("#Left");
 
+      // ring the bell:
+bell.addEventListener("click", function(){
+   const bell = new Icons();
+   bell.ringBell("#bell");
+})
 
 
 /*
