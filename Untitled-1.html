@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animated icons with JS</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <style>
+    * {
+        outline: red 1px solid;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    header {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        padding: 0 85px;
+        height: 60px;
+
+        background-color: #93b7f2;
+        -webkit-box-shadow: 0 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+        -moz-box-shadow:    0 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+        box-shadow:         0 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    }
+    .arrow {
+        font-size: 2.5rem;
+        padding-top: 5px;
+        color: gray;
+    }
+    #Left {
+        float: left;
+    }
+    #right {
+        float: right;
+    }
+    p {
+        flex: 8;
+        text-align: center;
+        padding-top: 7px;
+
+        font-family: 'Indie Flower', cursive;
+        font-size: 1.9rem;
+        color: #ffffff;
+    }
+
+    /* click me :*/
+    .clickMe {
+        margin-top: 25px;
+    }
+    .bell {
+        margin-left: 42%;
+        margin-bottom: 8px;
+        
+        font-size: 5rem;
+        color: rgba(30, 30, 30, 0.5);
+    }
+    h3 {
+        font-size: 1.7rem;
+        text-align: center;
+        font-family: 'Indie Flower', cursive;
+        color: rgba(30, 30, 30, 0.5);
+    }
+    
+    /* ourglass :*/ 
+    .ourGlass {
+        padding: 45px;
+        background-color: rgba(30, 30, 30, 0.1);
+    }
+    .clock {
+        margin-left: 32%;
+
+        font-size: 11rem;
+        color: #93b7f2;
+        
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <i id="Left" class="fa arrow"></i>
+        <p>SCROLL DOWN</p>
+        <i id="right" class="fa arrow"></i>
+    </header>
+    <div class="clickMe"></div>
+        <i id="bell" class="fa bell">&#xf0f3;</i>
+        <h3>CLICK ME </h3>
+    <div class="ourGlass">
+        <i id="clockglass" class="fa clock">&#xf251;</i>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
