@@ -1,5 +1,7 @@
 // VARs
 const bell = document.querySelector('#bell');
+let wait = document.getElementsByTagName('#loading');
+let loading =true;
 
 // CONSTRUCTOR FUNCTION :
 
@@ -28,9 +30,27 @@ function Icons() {
 
            setTimeout(function() {
             arr.style.transform = "rotate(0deg)";
-           },500)
+           },500)  
+     }
+     this.fillOur = function(id) {
+        setInterval(function() {
+            let arr = document.querySelector(`${id}`);
+            arr.innerHTML = "&#xf251;";
+            arr.style.transform = "rotate(0deg)";
+          
+         setTimeout(function() {
+            arr.innerHTML = "&#xf252;";
+         },500) 
 
-           
+         setTimeout(function() {
+            arr.innerHTML = "&#xf253;";
+         },1000) 
+
+         setTimeout(function() {
+            arr.style.transform = "rotate(180deg)";
+         },1500)
+        },2000)
+        loading = false;
      }
 } 
 
@@ -41,20 +61,15 @@ arrowR.fillArrow("#right");
 const arrowL = new Icons();
 arrowL.fillArrow("#Left");
 
-      // ring the bell:
+      // when click the bell:
 bell.addEventListener("click", function(){
+      //ring the bell:
    const bell = new Icons();
    bell.ringBell("#bell");
+      // load the ourGlass:
+      if(loading) {
+         const our = new Icons();
+         our.fillOur("#clockglass");
+      }      
 })
-
-
-/*
- let arrowR = document.querySelector('#right');
- arrowR.innerHTML = "&#xf103;"*/
-
-
- /*let arrowR = document.querySelector('#right');*/
  
- // get access to the arrows:
- /*let arrowL = document.querySelector('#Left');
- arrowL.innerHTML = "&#xf103;"*/
