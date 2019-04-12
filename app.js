@@ -1,7 +1,17 @@
 // VARs
 const bell = document.querySelector('#bell');
 let wait = document.getElementsByTagName('#loading');
+
+// BALLS OF THE SWINGER :
+const leftBall = document.querySelector(".l");
+const rightBall = document.querySelector(".r");
+const a = document.querySelector(".a");
+const bb = document.querySelector(".bb");
+
 let loading =true;
+let interval = 100;
+
+interval += 200;
 
 // CONSTRUCTOR FUNCTION :
 
@@ -53,6 +63,45 @@ function Icons() {
         loading = false;
      }
 } 
+let x = true;
+function Wave() {
+         // swip up to Down:
+      this.upDow = function(ball) {
+            // initial position:
+            setTimeout(function() {
+                ball.style.transform = "translate(0px,6px) ";
+            },100)
+
+            setTimeout(function() {
+               ball.style.transform = "translate(0px,-6px) ";
+            },300)
+
+            setTimeout(function() {
+               ball.style.transform = "translate(0px,0px) ";
+            },500)
+      }
+         // swip up:
+     this.up = function(ball) {
+            // initial position:
+            setTimeout(function() {
+               ball.style.transform = "translate(0px,6px) ";
+            },700)
+
+            setTimeout(function() {
+               ball.style.transform = "translate(0px,0px) ";
+            },900)
+     }
+
+     this.down = function(ball) {
+            setTimeout(function() {
+               ball.style.transform = "translate(0px,-6px) ";
+            },1100)
+
+            setTimeout(function() {
+               ball.style.transform = "translate(0px,0px) ";
+            },1300)
+     }
+}
 
       // move the arrow up/down
 const arrowR =  new Icons();
@@ -72,4 +121,16 @@ bell.addEventListener("click", function(){
          our.fillOur("#clockglass");
       }      
 })
- 
+
+      // swing th balls:
+      setInterval(function() {
+         const ballLeft = new Wave();
+         ballLeft.upDow(leftBall);     
+   
+         const ballA = new Wave();
+         ballA.up(a); 
+
+         const ballB = new Wave();
+         ballB.down(bb); 
+      },1500)
+          
