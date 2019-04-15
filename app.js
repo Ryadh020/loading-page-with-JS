@@ -137,11 +137,11 @@ bell.addEventListener("click", function(){
 
             // initial position:
             setTimeout(function() {
-               leftBall.style.transform = "translate(0px,6px) ";
+               leftBall.style.transform = "translate(0px,4px) ";
             },100)
 
             setTimeout(function() {
-               leftBall.style.transform = "translate(0px,-6px) ";
+               leftBall.style.transform = "translate(0px,-4px) ";
             },300)
 
             setTimeout(function() {
@@ -152,69 +152,69 @@ bell.addEventListener("click", function(){
 
             // initial position:
             setTimeout(function() {
-               a.style.transform = "translate(0px,6px) ";
-            },600)
+               a.style.transform = "translate(0px,4px) ";
+            },400)
 
             setTimeout(function() {
                a.style.transform = "translate(0px,0px) ";
-            },700)
+            },600)
 
          // swip down:
 
             // initial position:
             setTimeout(function() {
-               bb.style.transform = "translate(0px,-6px) ";
-            },900)
+               bb.style.transform = "translate(0px,-4px) ";
+            },500)
 
             setTimeout(function() {
                bb.style.transform = "translate(0px,0px) ";
-            },1100)
+            },700)
 
             // swip up:
 
             // initial position:
             setTimeout(function() {
-               c.style.transform = "translate(0px,6px) ";
-            },1300)
+               c.style.transform = "translate(0px,4px) ";
+            },600)
 
             setTimeout(function() {
                c.style.transform = "translate(0px,0px) ";
-            },1500)
+            },800)
 
             // swip down:
 
             // initial position:
             setTimeout(function() {
-               d.style.transform = "translate(0px,-6px) ";
-            },1700)
+               d.style.transform = "translate(0px,-4px) ";
+            },700)
 
             setTimeout(function() {
                d.style.transform = "translate(0px,0px) ";
-            },1900)
+            },900)
 
             // swip up:
 
             // initial position:
             setTimeout(function() {
-               f.style.transform = "translate(0px,6px) ";
-            },2100)
+               f.style.transform = "translate(0px,4px) ";
+            },800)
 
             setTimeout(function() {
                f.style.transform = "translate(0px,0px) ";
-            },2300)
+            },1000)
 
             // swip down:
 
             // initial position:
             setTimeout(function() {
-               r.style.transform = "translate(0px,-6px) ";
-            },2500)
+               r.style.transform = "translate(0px,-4px) ";
+            },900)
 
             setTimeout(function() {
                r.style.transform = "translate(0px,0px) ";
-            },2700)
+            },1100)
          
-         },2900)
+         },1200)
          /*
          const ballLeft = new Wave();
          ballLeft.upDow(leftBall);     
