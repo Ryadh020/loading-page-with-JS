@@ -68,7 +68,7 @@ var interval = 100;
 
 function Wave() {
          // swip up to Down:
-      this.upDow = function(ball,inter) {
+      this.upDow = function(ball) {
             // initial position:
             setTimeout(function() {
                 ball.style.transform = "translate(0px,4px) ";
@@ -86,7 +86,7 @@ function Wave() {
             interval += 200;
       }
          // swip up:
-     this.up = function(ball,inter) {
+     this.up = function(ball) {
             // initial position:
             setTimeout(function() {
                ball.style.transform = "translate(0px,4px) ";
@@ -99,7 +99,7 @@ function Wave() {
             interval += 200;
      }
          // swip down:
-     this.down = function(ball,inter) {
+     this.down = function(ball) {
             // initial position:
             setTimeout(function() {
                ball.style.transform = "translate(0px,-4px) ";
@@ -109,7 +109,7 @@ function Wave() {
             setTimeout(function() {
                ball.style.transform = "translate(0px,0px) ";
             },700)
-            interval += 200;
+
      }
 }
 
@@ -134,25 +134,108 @@ bell.addEventListener("click", function(){
 
       // swing th balls:
       setInterval(function() {
+
+            // initial position:
+            setTimeout(function() {
+               leftBall.style.transform = "translate(0px,6px) ";
+            },100)
+
+            setTimeout(function() {
+               leftBall.style.transform = "translate(0px,-6px) ";
+            },300)
+
+            setTimeout(function() {
+               leftBall.style.transform = "translate(0px,0px) ";
+            },500)
+
+         // swip up:
+
+            // initial position:
+            setTimeout(function() {
+               a.style.transform = "translate(0px,6px) ";
+            },600)
+
+            setTimeout(function() {
+               a.style.transform = "translate(0px,0px) ";
+            },700)
+
+         // swip down:
+
+            // initial position:
+            setTimeout(function() {
+               bb.style.transform = "translate(0px,-6px) ";
+            },900)
+
+            setTimeout(function() {
+               bb.style.transform = "translate(0px,0px) ";
+            },1100)
+
+            // swip up:
+
+            // initial position:
+            setTimeout(function() {
+               c.style.transform = "translate(0px,6px) ";
+            },1300)
+
+            setTimeout(function() {
+               c.style.transform = "translate(0px,0px) ";
+            },1500)
+
+            // swip down:
+
+            // initial position:
+            setTimeout(function() {
+               d.style.transform = "translate(0px,-6px) ";
+            },1700)
+
+            setTimeout(function() {
+               d.style.transform = "translate(0px,0px) ";
+            },1900)
+
+            // swip up:
+
+            // initial position:
+            setTimeout(function() {
+               f.style.transform = "translate(0px,6px) ";
+            },2100)
+
+            setTimeout(function() {
+               f.style.transform = "translate(0px,0px) ";
+            },2300)
+
+            // swip down:
+
+            // initial position:
+            setTimeout(function() {
+               r.style.transform = "translate(0px,-6px) ";
+            },2500)
+
+            setTimeout(function() {
+               r.style.transform = "translate(0px,0px) ";
+            },2700)
+         
+         },2900)
+         /*
          const ballLeft = new Wave();
-         ballLeft.upDow(leftBall,interval);     
+         ballLeft.upDow(leftBall);     
    
          const ballA = new Wave();
-         ballA.up(a,interval); 
+         ballA.up(a); 
 
          const ballB = new Wave();
-         ballB.down(bb,interval); 
+         ballB.down(bb); 
 
          const ballc = new Wave();
-         ballc.up(c,interval);
+         ballc.up(c);
 
          const balld = new Wave();
-         balld.down(d,interval);
+         balld.down(d);
 
          const ballf = new Wave();
-         ballf.up(f,interval);
+         ballf.up(f);
 
          const ballr = new Wave();
-         ballr.upDow(r,interval);
-      },800)
+         ballr.upDow(r);
+         */
+    
           
