@@ -7,11 +7,12 @@ const leftBall = document.querySelector(".l");
 const rightBall = document.querySelector(".r");
 const a = document.querySelector(".a");
 const bb = document.querySelector(".bb");
+const c = document.querySelector(".c");
+const d = document.querySelector(".d");
+const f = document.querySelector(".f");
+const r = document.querySelector(".r");
 
 let loading =true;
-let interval = 100;
-
-interval += 200;
 
 // CONSTRUCTOR FUNCTION :
 
@@ -63,43 +64,52 @@ function Icons() {
         loading = false;
      }
 } 
-let x = true;
+var interval = 100;
+
 function Wave() {
          // swip up to Down:
-      this.upDow = function(ball) {
+      this.upDow = function(ball,inter) {
             // initial position:
             setTimeout(function() {
-                ball.style.transform = "translate(0px,6px) ";
+                ball.style.transform = "translate(0px,4px) ";
             },100)
+            interval += 200;
 
             setTimeout(function() {
-               ball.style.transform = "translate(0px,-6px) ";
+               ball.style.transform = "translate(0px,-4px) ";
             },300)
+            interval += 200;
 
             setTimeout(function() {
                ball.style.transform = "translate(0px,0px) ";
             },500)
+            interval += 200;
       }
          // swip up:
-     this.up = function(ball) {
+     this.up = function(ball,inter) {
             // initial position:
             setTimeout(function() {
-               ball.style.transform = "translate(0px,6px) ";
-            },700)
+               ball.style.transform = "translate(0px,4px) ";
+            },400)
+            interval += 200;
 
             setTimeout(function() {
                ball.style.transform = "translate(0px,0px) ";
-            },900)
+            },600)
+            interval += 200;
      }
-
-     this.down = function(ball) {
+         // swip down:
+     this.down = function(ball,inter) {
+            // initial position:
             setTimeout(function() {
-               ball.style.transform = "translate(0px,-6px) ";
-            },1100)
+               ball.style.transform = "translate(0px,-4px) ";
+            },500)
+            interval += 200;
 
             setTimeout(function() {
                ball.style.transform = "translate(0px,0px) ";
-            },1300)
+            },700)
+            interval += 200;
      }
 }
 
@@ -125,12 +135,24 @@ bell.addEventListener("click", function(){
       // swing th balls:
       setInterval(function() {
          const ballLeft = new Wave();
-         ballLeft.upDow(leftBall);     
+         ballLeft.upDow(leftBall,interval);     
    
          const ballA = new Wave();
-         ballA.up(a); 
+         ballA.up(a,interval); 
 
          const ballB = new Wave();
-         ballB.down(bb); 
-      },1500)
+         ballB.down(bb,interval); 
+
+         const ballc = new Wave();
+         ballc.up(c,interval);
+
+         const balld = new Wave();
+         balld.down(d,interval);
+
+         const ballf = new Wave();
+         ballf.up(f,interval);
+
+         const ballr = new Wave();
+         ballr.upDow(r,interval);
+      },800)
           
